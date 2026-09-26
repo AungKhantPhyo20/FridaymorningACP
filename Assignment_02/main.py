@@ -45,4 +45,14 @@ except ValueError as e:
 try:
     renter.name = ""
 except ValueError as e:
-    print("Bad name update....
+    print("Bad name update caught:", e)
+
+try:
+    renter.license_no = -5
+except ValueError as e:
+    print("Bad licence update caught:", e)
+
+print("\nMixed vehicle list:")
+for vehicle in [car, electric_car, motorbike]:
+    print(vehicle)
+
